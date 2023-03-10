@@ -1,0 +1,5 @@
+#+AUTHOR: Asif Mahmud Shimon
+#+STARTUP: content indent
+
+* JS Utils
+Collection of some utility functions for javascript/typescript.
