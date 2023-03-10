@@ -5,7 +5,8 @@
   "main": "lib/esm/index.js",
   "scripts": {
     "test": "jest",
-    "build": "tsc --build --clean",
+    "clean": "tsc --build --clean",
+    "build": "tsc",
     "build:watch": "tsc --watch"
   },
   "repository": {
