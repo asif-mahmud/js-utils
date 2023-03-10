@@ -51,7 +51,6 @@ export function flatten(inputValue: ObjectType) {
   let output: ObjectType = {};
 
   const flatArr = objectToArray(inputValue);
-  console.log(flatArr);
 
   // add each flattened key-value object to the output
   flatArr.forEach((obj) => {
