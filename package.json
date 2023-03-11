@@ -4,7 +4,8 @@
   "description": "Some utility functions for JS/TS",
   "main": "lib/esm/index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch --coverage",
     "clean": "tsc --build --clean",
     "build": "tsc",
     "build:watch": "tsc --watch"

@@ -1,1 +1,1 @@
-
+export { flatten } from "./flatten";
