@@ -1,5 +1,6 @@
 {
-  "name": "js-utils",
+  "name": "@gswag/js-utils",
+  "private": false,
   "version": "0.0.1",
   "description": "Some utility functions for JS/TS",
   "main": "lib/esm/index.js",

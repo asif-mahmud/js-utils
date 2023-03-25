@@ -3,3 +3,46 @@
 
 * JS Utils
 Collection of some utility functions for javascript/typescript.
+
+* Functions
+** flatten
+Flattens an object's properties into string properties.
+**** example
+#+begin_src javascript
+  flatten({
+    a: 1,
+    b: {
+      b1: 2,
+      b2: [0, 1, 2]
+    },
+    c: [
+      {
+        c1: 1,
+        c2: {
+          c21: 1,
+          c22: 2
+        }
+      }
+    ]});
+
+  /*
+    {
+    a: 1,
+    "b.b1": 2,
+    "b.b2.0": 0,
+    "b.b2.1": 1,
+    "b.b2.2": 2,
+    "c.0.c1": 1,
+    "c.0.c2.c21": 1,
+    "c.0.c2.c22": 2
+    }
+   ,*/
+#+end_src
+**** signature
+#+begin_src javascript
+  flatten(inputValue)
+#+end_src
+**** arguments
+- inputValue :: Object
+**** returns
+flattened object. see example.
