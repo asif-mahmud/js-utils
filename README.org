@@ -1,5 +1,5 @@
 #+AUTHOR: Asif Mahmud Shimon
-#+STARTUP: content indent
+#+STARTUP: content indent showall
 
 * JS Utils
 Collection of some utility functions for javascript/typescript.
@@ -26,7 +26,7 @@ Flattens an object's properties into string properties.
     ]});
 
   /*
-    {
+  {
     a: 1,
     "b.b1": 2,
     "b.b2.0": 0,
@@ -35,8 +35,8 @@ Flattens an object's properties into string properties.
     "c.0.c1": 1,
     "c.0.c2.c21": 1,
     "c.0.c2.c22": 2
-    }
-   ,*/
+  }
+  ,*/
 #+end_src
 **** signature
 #+begin_src javascript
@@ -46,3 +46,46 @@ Flattens an object's properties into string properties.
 - inputValue :: Object
 **** returns
 flattened object. see example.
+** unflatten
+Reverse of flatten. From a flattened object returns the original object with all
+it's nested properties and values.
+**** example
+#+begin_src  javascript
+  unflatten(  {
+    a: 1,
+    "b.b1": 2,
+    "b.b2.0": 0,
+    "b.b2.1": 1,
+    "b.b2.2": 2,
+    "c.0.c1": 1,
+    "c.0.c2.c21": 1,
+    "c.0.c2.c22": 2
+  });
+
+  /*
+  {
+    a: 1,
+    b: {
+      b1: 2,
+      b2: [0, 1, 2]
+    },
+    c: [
+      {
+        c1: 1,
+        c2: {
+          c21: 1,
+          c22: 2
+        }
+      }
+    ]
+  }
+  */
+#+end_src
+**** signature
+#+begin_src javascript
+  unflatten(inputValue)
+#+end_src
+**** arguments
+- inputValue :: flattened object
+**** returns
+original object. see example.
