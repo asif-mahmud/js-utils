@@ -1,0 +1,7 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "cleanOutputDir": true,
+  "entryPoints": ["./src/index.ts"],
+  "out": "./docs",
+  "excludeInternal": true
+}
